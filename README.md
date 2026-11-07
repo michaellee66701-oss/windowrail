@@ -2,7 +2,7 @@
 
 一个简约的 Windows 纵向透明悬浮栏。把已打开的文档窗口放在手边，点击名称即可切换；同一 Word 中的多份文档分别显示，也可以保留固定程序启动入口。
 
-[下载便携版](https://github.com/michaellee66701-oss/windowswitch/releases/latest) · [使用说明](docs/USAGE.txt) · [验证记录与回归清单](docs/TESTING.md) · [变更记录](CHANGELOG.md)
+[下载便携版](https://github.com/michaellee66701-oss/windowrail/releases/latest) · [使用说明](docs/USAGE.txt) · [验证记录与回归清单](docs/TESTING.md) · [变更记录](CHANGELOG.md)
 
 ## 功能与使用
 
@@ -117,8 +117,8 @@ flowchart TD
 在项目根目录运行：
 
 ```powershell
-git clone https://github.com/michaellee66701-oss/windowswitch.git
-cd windowswitch
+git clone https://github.com/michaellee66701-oss/windowrail.git
+cd windowrail
 
 # 执行 19 项逻辑检查，失败时返回非零退出码。
 .\scripts\test.ps1
