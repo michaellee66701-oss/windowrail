@@ -1,0 +1,36 @@
+name: Windows build and checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+      - name: Run logic checks
+        run: ./scripts/test.ps1
+      - name: Build portable application
+        run: ./scripts/build.ps1
+      - name: Package without local user data
+        run: ./scripts/package.ps1
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v7
+        with:
+          name: WindowRail-win-x64
+          path: artifacts/*
+          if-no-files-found: error
+          retention-days: 14

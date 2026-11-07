@@ -1,0 +1,31 @@
+# Build outputs and local tools
+**/bin/
+**/obj/
+/.tools/
+/dist/
+/artifacts/
+/work/
+/.nuget/
+/.vs/
+/.idea/
+*.user
+*.suo
+*.tmp
+*.log
+
+# Window names, program paths, aliases and local state are personal data.
+**/data/
+settings.json
+settings.json.bak
+settings.json.invalid-*
+
+# Credentials and local environment
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+
+# Archives are published as release assets, not committed.
+*.zip

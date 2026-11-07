@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AssemblyName>WindowRail</AssemblyName>
+    <RootNamespace>WindowRail</RootNamespace>
+    <Version>1.0.0</Version>
+    <Description>窗栏 · 透明的文档窗口切换栏</Description>
+    <!-- WPF owns DPI awareness; WinForms is used only for its tray icon and screen metadata. -->
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+    <ApplicationIcon Condition="Exists('Assets\WindowRail.ico')">Assets\WindowRail.ico</ApplicationIcon>
+  </PropertyGroup>
+</Project>
